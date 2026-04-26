@@ -1,0 +1,18 @@
+{
+  "OD": "Once daily",
+  "BD": "Twice daily (Morning & Night)",
+  "TDS": "Three times daily (Morning, Afternoon, Night)",
+  "TID": "Three times daily (Morning, Afternoon, Night)",
+  "QID": "Four times daily (Morning, Afternoon, Evening, Night)",
+  "AC": "Before meals",
+  "PC": "After meals",
+  "HS": "At bedtime",
+  "SOS": "If needed (for pain/fever)",
+  "STAT": "Immediately (one dose only)",
+  "PRN": "As needed",
+  "PO": "By mouth",
+  "MG": "Milligrams",
+  "TAB": "Tablet",
+  "CAP": "Capsule",
+  "SYP": "Syrup"
+}

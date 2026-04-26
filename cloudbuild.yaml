@@ -1,0 +1,50 @@
+steps:
+  # Step 1: Install dependencies
+  - name: 'node:20'
+    entrypoint: npm
+    args: ['install']
+
+  # Step 2: Build frontend (Vite) and server (tsc)
+  - name: 'node:20'
+    entrypoint: npm
+    args: ['run', 'build:all']
+
+  # Step 3: Build the Docker container image
+  # FIXED: Using Artifact Registry instead of deprecated gcr.io
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/rxbridge/rxbridge:$COMMIT_SHA'
+      - '.'
+
+  # Step 4: Push the image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/rxbridge/rxbridge:$COMMIT_SHA'
+
+  # Step 5: Deploy to Cloud Run
+  # FIXED: Added environment variable secrets for API keys
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'rxbridge'
+      - '--image'
+      - 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/rxbridge/rxbridge:$COMMIT_SHA'
+      - '--region'
+      - 'asia-southeast1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--set-secrets'
+      - 'GEMINI_API_KEY=GEMINI_API_KEY:latest,GOOGLE_MAPS_API_KEY=GOOGLE_MAPS_API_KEY:latest'
+      - '--min-instances'
+      - '1'
+      - '--port'
+      - '3000'
+
+images:
+  - 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/rxbridge/rxbridge:$COMMIT_SHA'

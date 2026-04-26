@@ -1,0 +1,26 @@
+[
+  {
+    "drugA": "Aspirin",
+    "drugB": "Warfarin",
+    "severity": "High",
+    "warning": "Increased risk of bleeding. Do not take together without doctor supervision."
+  },
+  {
+    "drugA": "Sildenafil",
+    "drugB": "Isosorbide",
+    "severity": "Critical",
+    "warning": "Severe drop in blood pressure. Potentially fatal combination."
+  },
+  {
+    "drugA": "Metformin",
+    "drugB": "Alcohol",
+    "severity": "Medium",
+    "warning": "Increased risk of lactic acidosis."
+  },
+  {
+    "drugA": "Amoxicillin",
+    "drugB": "Methotrexate",
+    "severity": "Medium",
+    "warning": "Possible toxicity of Methotrexate."
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "RxBridge",
+  "description": "AI-powered prescription plain-language translator and medication safety app for Indian patients.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "ai_medical_translation",
+    "ocr_scanning",
+    "medication_safety"
+  ]
+}
