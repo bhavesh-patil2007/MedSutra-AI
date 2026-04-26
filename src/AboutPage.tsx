@@ -17,7 +17,7 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow p-10 mb-8 border-l-4 border-blue-500">
                 <div className="mb-6">
                     <img
-                        src="/logo.jpeg"
+                        src="/src/logo.jpeg"
                         alt="AyurRx Logo"
                         style={{
                             width: '90px',  /* Slightly larger than the original 5xl heart */
