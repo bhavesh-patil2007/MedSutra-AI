@@ -330,7 +330,7 @@ function LogoIcon() {
   return (
     <div style={{ width: 45, height: 45, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
       <img
-        src="/logo.jpeg"
+        src="/src/logo.jpeg"
         alt="MedSutra AI Logo"
         style={{
           width: 45,
@@ -857,7 +857,7 @@ export default function ScanPage({ onResult, profile, lang, onLangChange }: Scan
             <div style={{ background: 'white', borderRadius: 16, boxShadow: '0 2px 12px rgba(0,0,0,0.07)', padding: '40px', marginBottom: '32px', borderLeft: '4px solid #1a6fd4' }}>
               <div style={{ marginBottom: '24px' }}>
                 <img
-                  src="/logo.jpeg"
+                  src="/src/logo.jpeg"
                   alt="MedSutra AI Logo"
                   style={{
                     width: 72,
