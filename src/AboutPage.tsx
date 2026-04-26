@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from './logo.jpeg';
 import { useNavigate } from 'react-router-dom';
 
 export default function AboutPage() {
@@ -17,7 +18,7 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow p-10 mb-8 border-l-4 border-blue-500">
                 <div className="mb-6">
                     <img
-                        src="/src/logo.jpeg"
+                        src={logoImg}
                         alt="AyurRx Logo"
                         style={{
                             width: '90px',  /* Slightly larger than the original 5xl heart */
