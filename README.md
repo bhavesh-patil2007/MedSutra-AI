@@ -1,9 +1,9 @@
-# RxBridge: AI Medical Translator & Safety App
+# MedSutra AI: AI Medical Translator & Safety App
 
 RxBridge is a full-stack web application designed for Indian patients to translate complex medical prescriptions into plain, understandable language. It focus on safety by detecting drug-drug interactions and providing dietary warnings.
 
 ## Key Features
-- **OCR Prescription Scanner**: Uses Tesseract.js (client-side) to extract text from photos.
+- **AI-Powered Prescription Scanner**: Uses Google Gemini Vision AI to directly analyze prescription images — no OCR needed.
 - **AI-Powered Analysis**: Uses Google Gemini (1.5-flash) to parse medical shorthand and explain purposes.
 - **Multilingual Support**: Instant translation to Hindi and Marathi.
 - **Safety Engine**: Intelligent detection of drug-drug interactions and allergy conflicts.
@@ -53,4 +53,4 @@ gcloud run deploy rxbridge --source .
 - `/Dockerfile`: Containerization config.
 
 ## Disclaimer
-RxBridge is an AI assistant and should not be used as a replacement for professional medical advice. Always consult your doctor or pharmacist.
+MedSutra AI is an AI assistant and should not be used as a replacement for professional medical advice. Always consult your doctor or pharmacist.
