@@ -199,7 +199,13 @@ const css = `
     transition: all 0.3s ease;
   }
   
-  .hiw-step-card:hover .hiw-icon-wrap {
+@media (max-width: 768px) {
+  .rxb-scan-grid { grid-template-columns: 1fr; }
+  .rxb-hero-title { font-size: 32px; }
+  .rxb-feat-wrapper { grid-template-columns: 1fr 1fr; }
+  .rxb-illo-wrapper { display: none; }
+}  
+.hiw-step-card:hover .hiw-icon-wrap {
     transform: scale(1.05); box-shadow: 0 10px 24px rgba(26,111,212,0.12);
   }
 `;
@@ -956,4 +962,4 @@ export default function ScanPage({ onResult, profile, lang, onLangChange }: Scan
       <canvas ref={canvasRef} style={{ display: 'none' }} />
     </div>
   );
-}
+}// mobile fix applied
