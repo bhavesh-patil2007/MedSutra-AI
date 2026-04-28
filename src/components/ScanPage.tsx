@@ -168,7 +168,11 @@ const css = `
   }
   .rxb-lang-option:hover { background: #f0f5fd; color: #1a6fd4; }
   .rxb-lang-option.selected { background: #e2ecfc; color: #1a6fd4; font-weight: 700; }
-  .rxb-lang-dropdown { z-index: 9999 !important; position: absolute !important; }
+  @media (max-width: 768px) {
+    .rxb-lang-dropdown-menu { right: 0; left: auto; z-index: 9999; }
+    .rxb-lang-label { display: none; }
+  }
+
   
   .rxb-clear-btn { width: 100%; padding: 16px; background: rgba(255,255,255,0.7); color: #ef4444; border: 1px solid #fca5a5; border-radius: 16px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.15s; font-family: 'Inter', sans-serif; }
   .rxb-clear-btn:hover { background: #fef2f2; transform: translateY(-2px); }
@@ -591,7 +595,7 @@ export default function ScanPage({ onResult, profile, lang, onLangChange }: Scan
                 }}
               >
                 <Globe size={15} />
-                <span>{currentLangOption.nativeLabel}</span>
+                <span className="rxb-lang-label">{currentLangOption.nativeLabel}</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style={{ transform: langDropdownOpen ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.15s' }}>
                   <path d="M7 10l5 5 5-5z" />
                 </svg>
