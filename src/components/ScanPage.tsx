@@ -622,7 +622,7 @@ export default function ScanPage({ onResult, profile, lang, onLangChange }: Scan
         {/* ── SCAN TAB ── */}
         {activeTab === 'scan' && (
           <>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 24, padding: "24px 16px 36px", maxWidth: 1120, margin: '0 auto', alignItems: 'center' }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 48, padding: "52px 56px 36px", maxWidth: 1120, margin: "0 auto", alignItems: "center" }}>
               <div>
                 <div className="rxb-hero-title">MedSutra AI</div>
                 <div style={{ fontSize: 20, fontWeight: 700, color: '#1a3a6b', marginBottom: 18 }}>
