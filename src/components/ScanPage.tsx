@@ -168,6 +168,7 @@ const css = `
   }
   .rxb-lang-option:hover { background: #f0f5fd; color: #1a6fd4; }
   .rxb-lang-option.selected { background: #e2ecfc; color: #1a6fd4; font-weight: 700; }
+  .rxb-lang-dropdown { z-index: 9999 !important; position: absolute !important; }
   
   .rxb-clear-btn { width: 100%; padding: 16px; background: rgba(255,255,255,0.7); color: #ef4444; border: 1px solid #fca5a5; border-radius: 16px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.15s; font-family: 'Inter', sans-serif; }
   .rxb-clear-btn:hover { background: #fef2f2; transform: translateY(-2px); }

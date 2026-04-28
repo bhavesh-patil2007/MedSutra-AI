@@ -12,6 +12,9 @@ interface ProfilePageProps {
 }
 
 const css = `
+  @media (max-width: 768px) {
+    .rxb-profile-grid { grid-template-columns: 1fr !important; }
+  }
   .rxb-bg-pattern {
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background-image: radial-gradient(#a8c0e4 1px, transparent 1px), radial-gradient(#a8c0e4 1px, transparent 1px);
@@ -152,7 +155,7 @@ export default function ProfilePage({ profile, onUpdate, lang }: ProfilePageProp
           <h1 className="text-2xl font-bold text-slate-900">{t.healthProfile || 'Your Health Profile'}</h1>
         </header>
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-8 rxb-profile-grid">
           <div className="col-span-2 space-y-8">
             <div>
               <h2 className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">
