@@ -207,15 +207,12 @@ const css = `
 @media (max-width: 768px) {
   .rxb-scan-grid { grid-template-columns: 1fr; }
   .rxb-hero-title { font-size: 32px; }
-  .rxb-feat-wrapper { grid-template-columns: 1fr 1fr; }
-  @media (max-width: 768px) {
-    .rxb-hero-grid { grid-template-columns: 1fr !important; padding: 24px 16px !important; gap: 24px !important; }
-    .rxb-feat-wrapper { grid-template-columns: 1fr !important; }
-    .rxb-history-row { grid-template-columns: 1fr 1fr !important; }
-    .rxb-nav-link { font-size: 12px !important; padding: 6px 8px !important; white-space: nowrap; flex-shrink: 0; }
-    nav, .rxb-nav-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-    nav::-webkit-scrollbar { display: none; }
-  }
+  .rxb-hero-grid { grid-template-columns: 1fr !important; padding: 24px 16px !important; gap: 24px !important; }
+  .rxb-feat-wrapper { grid-template-columns: 1fr 1fr !important; }
+  .rxb-history-row { grid-template-columns: 1fr 1fr !important; }
+  .rxb-nav-link { font-size: 12px !important; padding: 6px 8px !important; white-space: nowrap; flex-shrink: 0; }
+  nav, .rxb-nav-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  nav::-webkit-scrollbar { display: none; }
   .rxb-illo-wrapper { display: none; }
 }  
 .hiw-step-card:hover .hiw-icon-wrap {
